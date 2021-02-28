@@ -1,0 +1,132 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:WeMos_D1_mini U?
+U 1 1 6035D94E
+P 4950 3900
+F 0 "U?" H 4950 3011 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 4950 2920 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 4950 2750 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 3100 2750 50  0001 C CNN
+	1    4950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_EBC Q?
+U 1 1 6035F576
+P 6300 3650
+F 0 "Q?" H 6491 3696 50  0000 L CNN
+F 1 "Q_NPN_EBC" H 6491 3605 50  0000 L CNN
+F 2 "" H 6500 3750 50  0001 C CNN
+F 3 "~" H 6300 3650 50  0001 C CNN
+	1    6300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6035FABC
+P 6400 2650
+F 0 "R?" H 6470 2696 50  0000 L CNN
+F 1 "R" H 6470 2605 50  0000 L CNN
+F 2 "" V 6330 2650 50  0001 C CNN
+F 3 "~" H 6400 2650 50  0001 C CNN
+	1    6400 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6035FEDE
+P 6050 4400
+F 0 "R?" H 6120 4446 50  0000 L CNN
+F 1 "R" H 6120 4355 50  0000 L CNN
+F 2 "" V 5980 4400 50  0001 C CNN
+F 3 "~" H 6050 4400 50  0001 C CNN
+	1    6050 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60360217
+P 6050 3900
+F 0 "C?" H 5935 3854 50  0000 R CNN
+F 1 "C" H 5935 3945 50  0000 R CNN
+F 2 "" H 6088 3750 50  0001 C CNN
+F 3 "~" H 6050 3900 50  0001 C CNN
+	1    6050 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 3450 6400 2900
+Wire Wire Line
+	6400 2900 4400 2900
+Wire Wire Line
+	4400 2900 4400 3500
+Wire Wire Line
+	4400 3500 4550 3500
+Wire Wire Line
+	6400 2800 6400 2900
+Connection ~ 6400 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 60362B49
+P 6400 2200
+F 0 "#PWR?" H 6400 2050 50  0001 C CNN
+F 1 "+5V" H 6415 2373 50  0000 C CNN
+F 2 "" H 6400 2200 50  0001 C CNN
+F 3 "" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2200 6400 2500
+$Comp
+L power:GND #PWR?
+U 1 1 6036389B
+P 6400 4950
+F 0 "#PWR?" H 6400 4700 50  0001 C CNN
+F 1 "GND" H 6405 4777 50  0000 C CNN
+F 2 "" H 6400 4950 50  0001 C CNN
+F 3 "" H 6400 4950 50  0001 C CNN
+	1    6400 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3850 6400 4950
+Wire Wire Line
+	6100 3650 6050 3650
+Wire Wire Line
+	6050 3650 6050 3750
+$Comp
+L power:GND #PWR?
+U 1 1 603661C6
+P 6050 5000
+F 0 "#PWR?" H 6050 4750 50  0001 C CNN
+F 1 "GND" H 6055 4827 50  0000 C CNN
+F 2 "" H 6050 5000 50  0001 C CNN
+F 3 "" H 6050 5000 50  0001 C CNN
+	1    6050 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4050 6050 4150
+Wire Wire Line
+	6050 4550 6050 5000
+Wire Wire Line
+	6050 4150 5700 4150
+Connection ~ 6050 4150
+Wire Wire Line
+	6050 4150 6050 4250
+$EndSCHEMATC
