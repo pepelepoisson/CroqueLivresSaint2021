@@ -1,4 +1,236 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:WeMos_D1_mini U?
+U 1 1 6035D94E
+P 4950 3900
+F 0 "U?" H 4950 2550 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 4950 2400 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 4950 2750 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 3100 2750 50  0001 C CNN
+	1    4950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_EBC Q?
+U 1 1 6035F576
+P 3350 3350
+F 0 "Q?" H 3541 3396 50  0000 L CNN
+F 1 "Q_NPN_EBC" H 3541 3305 50  0000 L CNN
+F 2 "" H 3550 3450 50  0001 C CNN
+F 3 "~" H 3350 3350 50  0001 C CNN
+	1    3350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6035FABC
+P 3450 2350
+F 0 "R?" H 3520 2396 50  0000 L CNN
+F 1 "R" H 3520 2305 50  0000 L CNN
+F 2 "" V 3380 2350 50  0001 C CNN
+F 3 "~" H 3450 2350 50  0001 C CNN
+	1    3450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6035FEDE
+P 3100 4100
+F 0 "R?" H 3170 4146 50  0000 L CNN
+F 1 "R" H 3170 4055 50  0000 L CNN
+F 2 "" V 3030 4100 50  0001 C CNN
+F 3 "~" H 3100 4100 50  0001 C CNN
+	1    3100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60360217
+P 3100 3600
+F 0 "C?" H 2985 3554 50  0000 R CNN
+F 1 "C" H 2985 3645 50  0000 R CNN
+F 2 "" H 3138 3450 50  0001 C CNN
+F 3 "~" H 3100 3600 50  0001 C CNN
+	1    3100 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 3150 3450 2600
+Wire Wire Line
+	3450 2600 1450 2600
+Wire Wire Line
+	3450 2500 3450 2600
+Connection ~ 3450 2600
+$Comp
+L power:+5V #PWR?
+U 1 1 60362B49
+P 3450 1900
+F 0 "#PWR?" H 3450 1750 50  0001 C CNN
+F 1 "+5V" H 3465 2073 50  0000 C CNN
+F 2 "" H 3450 1900 50  0001 C CNN
+F 3 "" H 3450 1900 50  0001 C CNN
+	1    3450 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1900 3450 2200
+$Comp
+L power:GND #PWR?
+U 1 1 6036389B
+P 3450 4650
+F 0 "#PWR?" H 3450 4400 50  0001 C CNN
+F 1 "GND" H 3455 4477 50  0000 C CNN
+F 2 "" H 3450 4650 50  0001 C CNN
+F 3 "" H 3450 4650 50  0001 C CNN
+	1    3450 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3550 3450 4650
+Wire Wire Line
+	3150 3350 3100 3350
+Wire Wire Line
+	3100 3350 3100 3450
+$Comp
+L power:GND #PWR?
+U 1 1 603661C6
+P 3100 4700
+F 0 "#PWR?" H 3100 4450 50  0001 C CNN
+F 1 "GND" H 3105 4527 50  0000 C CNN
+F 2 "" H 3100 4700 50  0001 C CNN
+F 3 "" H 3100 4700 50  0001 C CNN
+	1    3100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3750 3100 3850
+Wire Wire Line
+	3100 4250 3100 4700
+Wire Wire Line
+	3100 3850 2750 3850
+Connection ~ 3100 3850
+Wire Wire Line
+	3100 3850 3100 3950
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 603EFD3C
+P 8650 3850
+F 0 "J?" H 8622 3732 50  0000 R CNN
+F 1 "ePaper_connector" H 8622 3823 50  0000 R CNN
+F 2 "" H 8650 3850 50  0001 C CNN
+F 3 "~" H 8650 3850 50  0001 C CNN
+	1    8650 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8450 3450 7850 3450
+Text Label 7850 3450 0    50   ~ 0
+BUSY
+Wire Wire Line
+	8450 3550 7850 3550
+Wire Wire Line
+	8450 3650 7850 3650
+Wire Wire Line
+	8450 3750 7850 3750
+Wire Wire Line
+	8450 3850 7850 3850
+Wire Wire Line
+	8450 3950 7850 3950
+Wire Wire Line
+	8450 4050 7850 4050
+Wire Wire Line
+	8450 4150 7850 4150
+Text Label 7850 3550 0    50   ~ 0
+RST
+Text Label 7850 3650 0    50   ~ 0
+DC
+Text Label 7850 3750 0    50   ~ 0
+CS
+Text Label 7850 3850 0    50   ~ 0
+CLK
+Text Label 7850 3950 0    50   ~ 0
+DIN
+Text Label 7850 4050 0    50   ~ 0
+GND
+Text Label 7850 4150 0    50   ~ 0
+3.3V
+Wire Wire Line
+	5350 3700 5750 3700
+Text Label 5500 3700 0    50   ~ 0
+BUSY
+Wire Wire Line
+	5350 3900 5750 3900
+Text Label 5500 3900 0    50   ~ 0
+RST
+Wire Wire Line
+	5350 3600 5750 3600
+Text Label 5500 3600 0    50   ~ 0
+LED_DATA
+Wire Wire Line
+	5350 4300 5750 4300
+Text Label 5500 4300 0    50   ~ 0
+CS
+Wire Wire Line
+	5350 4000 5750 4000
+Text Label 5500 4000 0    50   ~ 0
+CLK
+Wire Wire Line
+	5350 4200 5750 4200
+Text Label 5500 4200 0    50   ~ 0
+DIN
+Wire Wire Line
+	4950 4700 4950 5000
+Text Label 4900 5100 0    50   ~ 0
+GND
+Wire Wire Line
+	5050 3100 5050 3000
+Wire Wire Line
+	5050 3000 5600 3000
+Text Label 5200 3000 0    50   ~ 0
+3.3V
+$Comp
+L pspice:DIODE D?
+U 1 1 603FAFB8
+P 6200 3500
+F 0 "D?" H 6200 3235 50  0000 C CNN
+F 1 "DIODE" H 6200 3326 50  0000 C CNN
+F 2 "" H 6200 3500 50  0001 C CNN
+F 3 "~" H 6200 3500 50  0001 C CNN
+	1    6200 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5350 3800 5750 3800
+Text Label 5500 3800 0    50   ~ 0
+DC
+Wire Wire Line
+	5350 4100 5750 4100
+Text Label 5500 4100 0    50   ~ 0
+MOSFET
+Wire Wire Line
+	4050 3500 4550 3500
+Text Label 4000 3500 0    50   ~ 0
+WEMOS_RESET
+Text Label 1450 2600 0    50   ~ 0
+WEMOS_RESET
+Wire Wire Line
+	6000 3500 5350 3500
+Wire Wire Line
+	6400 3500 6900 3500
+Text Label 6350 3500 0    50   ~ 0
+WEMOS_RESET
 $EndSCHEMATC
