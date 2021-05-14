@@ -78,8 +78,8 @@ GxEPD2_BW<GxEPD2_290_M06, GxEPD2_290_M06::HEIGHT> display1(GxEPD2_290_M06(/*CS=*
 
 char* mySsid = "croque-livre";
 // Type your own password
-char* myPassword = "****";
-// Type your own IP address and gateway
+char* myPassword = "*******";
+// Type your own IP address and gateway - This not the address in use on project ;-)
 IPAddress local_ip(192,168,168,168);
 IPAddress gateway(192,168,168,1);
 IPAddress netmask(255,255,255,0);
@@ -596,7 +596,12 @@ void setup()
         if (fileName=="/data/citations.txt"){citations_file_exists=true;}
         size_t fileSize = dir.fileSize();
         Serial.printf(" FS File: %s, size: %s\n", fileName.c_str(), formatBytes(fileSize).c_str());
+        if (fileName=="/log.json" && fileSize<50){
+          Serial.println("Found a suspicious log.json file because it is too small - Will delete.");
+          SPIFFS.remove("/log.json");
+          Serial.println("Now removed!");
         }
+      }
       //Serial.printf("\n");
     }
 
@@ -605,7 +610,8 @@ void setup()
     filename="citations.txt";
     FileRead();
   }
-
+  colorTransientWipe(strip.Color(255, 0, 0));
+  delay(500);
 
 
   Serial.println("(4) Setup ePaper.");
@@ -671,7 +677,11 @@ Serial.print("code_run_counter: "); Serial.print(_code_run_counter); Serial.prin
   JsonObject& logjObject = logjBuffer.parseObject(logData);
   File logFile = SPIFFS.open("/log.json", "w");
   logjObject.printTo(logFile);
-  logFile.close();
+
+ logFile.close();
+
+  colorTransientWipe(strip.Color(0, 255, 0));
+  delay(500);
 
   Serial.println("Setup done.");
 
